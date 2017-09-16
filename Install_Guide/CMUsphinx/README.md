@@ -1,3 +1,5 @@
+Speech Recognition & Phoneme Recognizer
+
 ### How to install
 ubntu : 
 1. http://www.sphinx-doc.org/en/stable/install.html
