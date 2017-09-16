@@ -20,11 +20,11 @@ y, sr = librosa.load('Kalimba.mp3')
 
 should need at least one Backend
 I was using window7. so needed to install ffmpeg.
-# Go https://www.ffmpeg.org/download.html
-# click get packages(window), download zip file.
-# add  System_variable, go PATH, add @@your path where it is@@/ffmpeg/bin
+## Go https://www.ffmpeg.org/download.html
+## click get packages(window), download zip file.
+## add  System_variable, go PATH, add @@your path where it is@@/ffmpeg/bin
  check if it's installed, go to cmd, 
  > ffmpeg -version
  
  tutorial 1 example.
- ![ tutorial 1](http://url/to/img.png)
+ ![ tutorial 1](https://raw.githubusercontent.com/sungmin-yang/Min_course/edit/master/Install_Guide/librosa//tutorial1.JPG)
