@@ -27,4 +27,4 @@ I was using window7. so needed to install ffmpeg.
  > ffmpeg -version
  
  tutorial 1 example.
- ![ tutorial 1](https://raw.githubusercontent.com/sungmin-yang/Min_course/edit/master/Install_Guide/librosa//tutorial1.JPG)
+ ![ tutorial 1](https://raw.githubusercontent.com/sungmin-yang/Min_course/edit/master/Install_Guide/librosa/tutorial1.JPG)
