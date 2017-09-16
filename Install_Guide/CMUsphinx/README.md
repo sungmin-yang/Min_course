@@ -1,3 +1,5 @@
 ### How to install
-ubntu : http://jrmeyer.github.io/installation/2016/01/08/Installing-CMU-Sphinx-on-Ubuntu.html 
+ubntu : http://www.sphinx-doc.org/en/stable/install.html
+perfectly work.
+
 window : 
