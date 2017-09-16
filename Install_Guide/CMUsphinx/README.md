@@ -8,3 +8,11 @@ ubntu :
 perfectly work.
 
 window : 
+
+
+
+for example, https://github.com/cmusphinx/pocketsphinx-python
+
+change MODELDIR, DATADIR for the below lines
+MODELDIR = "/usr/local/share/pocketsphinx/model/"
+DATADIR = "/my/Desktop/directory/pocketsphinx-master/test/data/"
