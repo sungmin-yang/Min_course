@@ -13,6 +13,10 @@ window :
 
 for example, https://github.com/cmusphinx/pocketsphinx-python
 
+https://github.com/cmusphinx/pocketsphinx/issues/32
+
 change MODELDIR, DATADIR for the below lines
+
 MODELDIR = "/usr/local/share/pocketsphinx/model/"
+
 DATADIR = "/my/Desktop/directory/pocketsphinx-master/test/data/"
