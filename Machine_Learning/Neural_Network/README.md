@@ -3,4 +3,4 @@ https://medium.com/towards-data-science/neural-network-architectures-156e5bad51b
 
 ## Snippet for Python
 
-label = [np.argmax(c) for c in counts]
+- label = [np.argmax(c) for c in counts]
