@@ -113,6 +113,11 @@ time.sleep(0.300) #300msec
 # 14. Check python version.
 import struct;print( 8 * struct.calcsize("P"))    #this is for 32/64bits
 import platform;print(platform.python_version())  #this is for 3.6.2 
+
+# 15. debug traps
+ _debug = False
+if _debug: print 'received[%d] from %s\n%s'%(len(data),remote,data)
+
 Python interviews and tips
 30 Essential Python Tips And Tricks For Programmers
 http://www.techbeamers.com/essential-python-tips-tricks-programmers/
