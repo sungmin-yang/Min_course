@@ -11,7 +11,7 @@ example : using library request.
 
 then you will see
 
-![alt text](https://github.com/sungmin-yang/Min_course/blob/master/Dialogue_system/Alexa/day3/pic/3.JPG)
+![alt text](https://github.com/sungmin-yang/Min_course/blob/master/Dialogue_system/Alexa/day3/pic/2.JPG)
 
 then upload zip file. (alexa-lambda.zip)
 
