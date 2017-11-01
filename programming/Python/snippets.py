@@ -118,6 +118,10 @@ import platform;print(platform.python_version())  #this is for 3.6.2
  _debug = False
 if _debug: print 'received[%d] from %s\n%s'%(len(data),remote,data)
 
+# 16. install modules in local
+pip install requests -t /path/to/project-dir
+
+
 Python interviews and tips
 30 Essential Python Tips And Tricks For Programmers
 http://www.techbeamers.com/essential-python-tips-tricks-programmers/
