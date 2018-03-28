@@ -24,3 +24,13 @@ target_array = target_array.permute(0,1,2).continguous()
 
 # Issue with fast/slow pack/unpack
 # https://github.com/pytorch/pytorch/issues/1788
+
+
+
+# Add <pad> for word-dictionary
+index = len(word_dict["word2index"])
+word_dict["word2index"]["<pad>"] = index
+word_dict["index2word"][index]   = "<pad>"
+# Add one more index-weights in embedding state_dict
+# > Either : pretrained_state_dict["encoder"]["weight"] += [Embedding_dim_weights] 
+# > OR     : pretrained_state_dict.encoder.weight.append([Embedding_dim_weights])
