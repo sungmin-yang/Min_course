@@ -19,7 +19,12 @@ from torch.nn import functional as F
 # With Numpy as a baseline it provides 5x+ speedup consistently.
 target_array = np.transpose(target_array, (0,1,2)).continguous()
 target_array = target_array.permute(0,1,2).continguous()
-    
+
+# When, Varibale is transposed, not contiguous anymore.
+target_array = torch.autograd.Variable(torch.randn(5,10,3)).t()             # target.size()==10,5,3  # torch.randn is FloatTensor
+target_array = torch.autograd.Variable(torch.randn(5,10,3)).permute(1,0,2)  # target.size()==10,5,3 
+# Both of them are not contiguous, simply change by one line.
+target_array.contiguous()
 
 
 # Issue with fast/slow pack/unpack
