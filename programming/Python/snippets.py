@@ -128,3 +128,17 @@ http://www.techbeamers.com/essential-python-tips-tricks-programmers/
 15 Essential Python Interview Questions
 https://www.codementor.io/sheena/essential-python-interview-questions-du107ozr6
 """
+
+# 17. always save as json or else (never pickle)
+# pickle is made for using internally in existent codes.
+# For independent environment, always save files as other forms.
+# convert pickle file to json
+import pickle, json
+with open(pickle_path, 'rw') as f_p:
+	loaded_content = pickle.load(f_p)
+
+# For JSON, extract only __dict__ values.
+content = loaded_content.__dict__
+with open(json_store_path, 'w') as f_j:
+	json.dump(content, f_j)
+	
