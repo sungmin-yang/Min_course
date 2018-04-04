@@ -61,10 +61,15 @@ elif not from_scratch :
     load_pretrained_model(model_agnews, pretrained_dict_agnews) # e.g., file_path = "smAWD.pt"
     load_pretrained_model(model_wiki, pretrained_dict_wiki) # e.g., file_path = "smAWD.pt"
     
-    
+models = [model_agnews, model_wiki, model_cat]
 
 # Make one or more optimizer for multi models.
 if adam:
+#     from functools import reduce #python 3
+#     import operator
+#     model_param = [list(filter(lambda : p: p.requires_grad, m.parameters())) for m in models]
+#     model_param = reduce(operator.concat, model_param)
+#     optimizer = optim.Adam(model_param, betas=(0.7, 0.9), lr=learning_rate, weight_decay=weight_decay)
     optimizer = optim.Adam(list(filter(lambda p: p.requires_grad, model_agnews.parameters()))+ 
                            list(filter(lambda p: p.requires_grad, model_wiki.parameters()))+
                            list(filter(lambda p: p.requires_grad, model_cat.parameters())),
@@ -78,9 +83,11 @@ else:
   
 
 # Foward, backward, updates Loss
-output, hidden = model_agnews(seq_tensor, hidden)
+output_agnews, hidden = model_agnews(seq_tensor, hidden)
+output_wiki, hidden = model_wiki(seq_tensor, hidden)
+output_multi = torch.cat([output_agnews, output_wiki],0)
 
-output = model_cat(output_from_models, nclass)    
+output = model_cat(output_multi, nclass)    
 criterion = nn.CrossEntropyLoss()
 loss = criterion(output, target)
 
