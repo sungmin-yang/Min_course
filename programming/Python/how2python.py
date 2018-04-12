@@ -142,3 +142,13 @@ content = loaded_content.__dict__
 with open(json_store_path, 'w') as f_j:
 	json.dump(content, f_j)
 	
+	
+	
+# System out
+import time
+import sys
+
+for i in range(100):
+    time.sleep(1)
+    sys.stdout.write("\r%d%%" % i)
+    sys.stdout.flush()
