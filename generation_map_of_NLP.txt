@@ -1,0 +1,3 @@
+Andrey Markov   -> Markov property -> Markov assumption -> Markov chain -> model letter sequences for russian literature
+Claude Shannon  -> information theory  -> used N-grams for letter and word sequences.
+-> popularized in IR, ...
